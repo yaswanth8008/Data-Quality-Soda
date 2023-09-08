@@ -1,0 +1,15 @@
+# Checks for basic validations
+checks for employees:
+  # table empytiness check
+  - row_count > 0
+
+  # missing row check on the primary and foreign key columns
+
+  - missing_count(employeeNumber) = 0
+  - missing_count(lastName) = 0
+  - missing_count(firstName) = 0
+  
+ # duplicate row check on the primary key column
+  - duplicate_count(employeeNumber) = 0 
+
+

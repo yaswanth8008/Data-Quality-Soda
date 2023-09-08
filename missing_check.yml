@@ -1,0 +1,19 @@
+checks for employees:
+  # - missing_count(@state) = 0
+  # - missing_percent(addressLine2) < 5%
+  # - missing_count(salesRepEmployeeNumber) < 25:
+  #     missing values: [n/a, NA, none]
+  - invalid_percent(email) < 5%:      
+      valid regex: ^[a-zA-Z0-9._%+-]+@classicmodelcars\.com$
+
+checks for offices:
+ - invalid_count(country) = 0:
+      valid values: ['USA', 'Australia','Japan','France','UK']
+
+
+for each dataset T:
+  datasets:
+    - customers
+    - offices
+  checks:
+    - missing_count(phone) = 0

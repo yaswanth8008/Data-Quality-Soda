@@ -1,0 +1,16 @@
+# Check for absent or forbidden columns in dataset
+checks for employees:
+  - schema:
+      warn:
+        when required column missing: 
+          - email
+          - lastName
+          - firstName
+    
+      fail:
+        when forbidden column present:
+          - address
+          - phone
+
+
+

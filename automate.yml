@@ -1,0 +1,9 @@
+variables:
+  name: extension email lastName
+checks for employees:
+  - row_count > 1:
+     name: Row count in ${name}
+  # - duplicate_count = 0:
+  #    name: Duplicate_count in ${name}
+    
+

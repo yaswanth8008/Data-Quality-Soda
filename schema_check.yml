@@ -1,0 +1,9 @@
+checks for customers:
+  - schema:
+      warn:
+        when required column missing: 
+          - customerName
+          - phone
+         
+    
+
